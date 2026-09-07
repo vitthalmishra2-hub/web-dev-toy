@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+
+    background: #070a12;
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 25px;
+
+    background: #0d1220;
+
+    border-bottom: 1px solid #222a3d;
+}
+
+
+header h1 {
+    font-size: 25px;
+}
+
+
+header p {
+    margin-top: 5px;
+
+    color: #8993aa;
+
+    font-size: 13px;
+}
+
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+
+.header-buttons button {
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    background: #171e31;
+
+    color: white;
+
+    border: 1px solid #303950;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.header-buttons button:hover {
+    background: #242d46;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    height: calc(100vh - 125px);
+
+    display: grid;
+
+    grid-template-columns: 1fr 300px;
+
+    gap: 15px;
+
+    padding: 15px;
+}
+
+
+/* =========================
+   SIMULATION
+========================= */
+
+.simulation {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    border: 1px solid #222a3d;
+
+    background: #050711;
+}
+
+
+#space {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    cursor: crosshair;
+}
+
+
+/* CLICK MESSAGE */
+
+.hint {
+    position: absolute;
+
+    bottom: 15px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    padding: 9px 16px;
+
+    background: rgba(10, 14, 25, 0.85);
+
+    border: 1px solid #293249;
+
+    border-radius: 20px;
+
+    color: #929bb0;
+
+    font-size: 12px;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CONTROL PANEL
+========================= */
+
+.panel {
+    padding: 22px;
+
+    background: #0d1220;
+
+    border: 1px solid #222a3d;
+
+    border-radius: 15px;
+}
+
+
+.panel h2 {
+    margin-bottom: 28px;
+}
+
+
+/* =========================
+   CONTROLS
+========================= */
+
+.control {
+    margin-bottom: 25px;
+}
+
+
+.label {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+}
+
+
+.label span:last-child {
+    color: #8d97ad;
+}
+
+
+input[type="range"] {
+    width: 100%;
+
+    accent-color: #7c5cff;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   COLORS
+========================= */
+
+.colors {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 10px;
+}
+
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    border: 3px solid transparent;
+
+    cursor: pointer;
+}
+
+
+.color-btn.active {
+    border-color: white;
+
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   STATS
+========================= */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 30px;
+}
+
+
+.stat {
+    padding: 15px;
+
+    background: #141a2b;
+
+    border: 1px solid #252e44;
+
+    border-radius: 10px;
+}
+
+
+.stat span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #77829b;
+
+    font-size: 10px;
+}
+
+
+.stat strong {
+    font-size: 23px;
+}
+
+
+/* =========================
+   CLEAR BUTTON
+========================= */
+
+.clear-btn {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    background: #261620;
+
+    border: 1px solid #633044;
+
+    color: #ff8daa;
+
+    cursor: pointer;
+}
+
+
+.clear-btn:hover {
+    background: #351c2c;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-top: 1px solid #222a3d;
+
+    color: #5d6780;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+    body {
+        overflow: auto;
+    }
+
+    main {
+        height: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+    .simulation {
+        height: 60vh;
+    }
+
+    .panel {
+        min-height: 500px;
+    }
+
+}

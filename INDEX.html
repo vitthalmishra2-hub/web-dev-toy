@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gravity Lab</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div>
+            <h1>🪐 Gravity Lab</h1>
+            <p>Create your own mini universe</p>
+        </div>
+
+        <div class="header-buttons">
+            <button id="pauseBtn">⏸ Pause</button>
+            <button id="resetBtn">↻ Reset</button>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- CANVAS -->
+        <section class="simulation">
+
+            <canvas id="space"></canvas>
+
+            <div class="hint">
+                🖱️ Click anywhere to create a planet
+            </div>
+
+        </section>
+
+
+        <!-- CONTROL PANEL -->
+        <aside class="panel">
+
+            <h2>⚙️ Controls</h2>
+
+
+            <!-- GRAVITY -->
+            <div class="control">
+
+                <div class="label">
+                    <span>Gravity</span>
+                    <span id="gravityValue">1.0</span>
+                </div>
+
+                <input
+                    type="range"
+                    id="gravity"
+                    min="0"
+                    max="2"
+                    step="0.1"
+                    value="1"
+                >
+
+            </div>
+
+
+            <!-- SIZE -->
+            <div class="control">
+
+                <div class="label">
+                    <span>Planet Size</span>
+                    <span id="sizeValue">15</span>
+                </div>
+
+                <input
+                    type="range"
+                    id="size"
+                    min="5"
+                    max="30"
+                    value="15"
+                >
+
+            </div>
+
+
+            <!-- MASS -->
+            <div class="control">
+
+                <div class="label">
+                    <span>Planet Mass</span>
+                    <span id="massValue">10</span>
+                </div>
+
+                <input
+                    type="range"
+                    id="mass"
+                    min="1"
+                    max="20"
+                    value="10"
+                >
+
+            </div>
+
+
+            <!-- COLORS -->
+            <div class="control">
+
+                <div class="label">
+                    <span>Planet Type</span>
+                </div>
+
+                <div class="colors">
+
+                    <button
+                        class="color-btn active"
+                        data-color="#7c5cff"
+                        style="background:#7c5cff">
+                    </button>
+
+                    <button
+                        class="color-btn"
+                        data-color="#ff4f81"
+                        style="background:#ff4f81">
+                    </button>
+
+                    <button
+                        class="color-btn"
+                        data-color="#36d399"
+                        style="background:#36d399">
+                    </button>
+
+                    <button
+                        class="color-btn"
+                        data-color="#ffc857"
+                        style="background:#ffc857">
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- STATS -->
+            <div class="stats">
+
+                <div class="stat">
+                    <span>PLANETS</span>
+                    <strong id="planetCount">0</strong>
+                </div>
+
+                <div class="stat">
+                    <span>FPS</span>
+                    <strong id="fps">60</strong>
+                </div>
+
+            </div>
+
+
+            <!-- CLEAR -->
+            <button id="clearBtn" class="clear-btn">
+                🗑 Clear Universe
+            </button>
+
+        </aside>
+
+    </main>
+
+
+    <footer>
+        Gravity Lab • HTML + CSS + JavaScript
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
